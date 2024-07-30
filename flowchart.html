@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Flow Chart</title>
+    <style>
+        .flowchart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .node {
+            border: 2px solid #000;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            width: 200px;
+            background-color: #f9f9f9;
+        }
+        .arrow {
+            margin: 10px;
+            width: 100px;
+            height: 30px;
+            border-top: 2px solid #000;
+            border-right: 2px solid #000;
+            transform: rotate(45deg);
+        }
+        .decision {
+            border-color: #000;
+            width: 150px;
+            transform: rotate(45deg);
+            margin: 20px;
+        }
+        .decision-text {
+            transform: rotate(-45deg);
+            width: 150px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="flowchart">
+    <div class="node">Start</div>
+    <div class="arrow"></div>
+    <div class="node">Homepage1<br>(Signup/Login)</div>
+    <div class="arrow"></div>
+
+    <div class="container">
+        <div class="flowchart">
+            <div class="node">Signup for New User</div>
+            <div class="arrow"></div>
+            <div class="node">Signup Page<br>(Create Account)</div>
+            <div class="arrow"></div>
+            <div class="node">Login<br>(New User)</div>
+            <div class="arrow"></div>
+            <div class="node">Homepage2</div>
+        </div>
+
+        <div class="flowchart">
+            <div class="node">Login for Old User</div>
+            <div class="arrow"></div>
+            <div class="node">Login Page</div>
+            <div class="arrow"></div>
+
+            <div class="container">
+                <div class="flowchart">
+                    <div class="decision">
+                        <div class="decision-text">Valid?</div>
+                    </div>
+
+                    <div class="flowchart">
+                        <div class="arrow"></div>
+                        <div class="node">Yes</div>
+                        <div class="arrow"></div>
+                        <div class="node">Homepage2</div>
+                    </div>
+
+                    <div class="flowchart">
+                        <div class="arrow"></div>
+                        <div class="node">No</div>
+                        <div class="arrow"></div>
+                        <div class="node">Invalid User</div>
+                        <div class="arrow"></div>
+                        <div class="node">Forgot Password</div>
+                        <div class="arrow"></div>
+                        <div class="node">Verify Email</div>
+                        <div class="arrow"></div>
+                        <div class="node">Login Page</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flowchart">
+        <div class="node">Homepage2</div>
+        <div class="arrow"></div>
+        <div class="node">Services</div>
+        <div class="arrow"></div>
+
+        <div class="container">
+            <div class="flowchart">
+                <div class="node">Student<br>(Access Papers)</div>
+            </div>
+            <div class="flowchart">
+                <div class="node">Admin<br>(Upload Papers)</div>
+            </div>
+            <div class="flowchart">
+                <div class="node">Forum<br>(Discuss Doubts)</div>
+            </div>
+        </div>
+
+        <div class="arrow"></div>
+        <div class="node">Logout</div>
+        <div class="arrow"></div>
+        <div class="node">Homepage1</div>
+    </div>
+</div>
+
+</body>
+</html>

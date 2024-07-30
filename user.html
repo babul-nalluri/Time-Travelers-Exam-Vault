@@ -1,0 +1,59 @@
+/*<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="user1.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Time Travelers Exam Vault</div>
+            <ul class="nav-links">
+                <li><a href="user.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="homepage.html">Log out</a></li>
+            </ul>
+            <div class="menu-icons">
+                <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+                <ion-icon name="close-outline" class="close-icon"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Question Papers</h1>
+        <p>Discover our services and offerings.</p>
+        <div class="buttons">
+            <!-- <a href="#" class="btn">Learn More</a> -->
+            <a href="services.html" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Question Papers. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const closeIcon = document.querySelector('.close-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.add('active');
+            menuIcon.style.display = 'none';
+            closeIcon.style.display = 'block';
+        });
+
+        closeIcon.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuIcon.style.display = 'block';
+            closeIcon.style.display = 'none';   
+        });
+    </script>
+</body>
+
+</html>

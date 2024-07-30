@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Upload Page</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Question Papers</h1>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <label for="file-upload" class="file-upload-label">
+                Choose file
+                <input type="file" id="file-upload" name="file-upload">
+            </label>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
